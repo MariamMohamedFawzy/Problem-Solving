@@ -24,21 +24,23 @@ def run():
     n = eval(input())
     nums = list(map(int, input().split()))
 
-    list_primes = []
-    for i in nums:
-        if isPrime(i):
-            list_primes.append(i)
+    # list_primes = []
+    # for i in nums:
+    #     if isPrime(i):
+    #         list_primes.append(i)
 
-    list_primes = list(set(list_primes))
-    remaining = []
-    for i in nums:
-        remain = True
-        for j in list_primes:
-            if i % j == 0:
-                remain = False
-        if remain:
-            remaining.append(i)
-    c = len(list_primes)
+    # list_primes = list(set(list_primes))
+    # remaining = []
+    # for i in nums:
+    #     remain = True
+    #     for j in list_primes:
+    #         if i % j == 0:
+    #             remain = False
+    #     if remain:
+    #         remaining.append(i)
+    # c = len(list_primes)
+    c = 0
+    remaining = nums
     # print(c, remaining, list_primes)
     while True and len(remaining) > 0:
         mn = min(remaining)
